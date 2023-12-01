@@ -99,38 +99,39 @@ removeHover();
 function windowSize() {
   if (window.outerWidth > 1600) {
     baseLeft = 48;
-    value = baseLeft;
     maxLeft = -830;
     maxScale = 1.0519;
-    scale = maxScale;
-    value = baseLeft;
-  } else if ((window.outerWidth > 800) & (window.outerWidth < 1600)) {
+  } else if ((window.outerWidth < 1601) & (window.outerWidth > 1200)) {
     baseLeft = 85;
-    value = baseLeft;
+    maxLeft = -555;
+    maxScale = 1.0519;
+  } else if (window.outerWidth < 1201) {
+    baseLeft = 48;
+    maxLeft = -855;
+    maxScale = 1.0519;
+  } else if ((window.outerWidth > 800) & (window.outerWidth < 1100)) {
+    baseLeft = 85;
     maxLeft = -560;
     maxScale = 1.0419;
-    scale = maxScale;
   } else if ((window.outerWidth < 481) & (window.outerWidth >= 434)) {
     baseLeft = 0;
-    value = baseLeft;
+
     maxLeft = -1025;
   } else if ((window.outerWidth < 434) & (window.outerWidth >= 484)) {
     baseLeft = 0;
-    value = baseLeft;
     maxLeft = -1064;
   } else if ((window.outerWidth < 484) & (window.outerWidth >= 349)) {
     baseLeft = 0;
-    value = baseLeft;
     maxLeft = -1093;
   } else if ((window.outerWidth < 349) & (window.outerWidth >= 327)) {
     baseLeft = 0;
-    value = baseLeft;
     maxLeft = -1117;
   } else if (window.outerWidth < 327) {
     baseLeft = 0;
-    value = baseLeft;
     maxLeft = -1140;
   }
+  scale = maxScale;
+  value = baseLeft;
 }
 
 function removeHover() {
