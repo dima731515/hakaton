@@ -69,13 +69,13 @@ function changePositionElements() {
     <div class="footer-link">
     <a href="https://www.vk.com/mastrildar" target="_blank" class="footer-link">
     <img class="footer-link__icon"src="../images/icons-header/v.2/VK.svg" alt="VK" />
-  </a></div>
-
-      
-      
-      
-      
-      `;
+  </a></div>`;
     document.querySelector(".phone__image").src = "../images/phone-mobile.png";
+    document.querySelector(".statistics__wrapper").innerHTML = `
+    <p class="statistics__text"><span class="statistics__numbers">100% </span> ЛОЯЛЬНОЙ АУДИТОРИИ</p>
+    <p class="statistics__text"><span class="statistics__numbers">238 000 </span> ПОДПИСЧИКОВ В TELEGRAM</p>
+    <p class="statistics__text"><span class="statistics__numbers">3 900 000 </span> ПОДПИСЧИКОВ НА YOUTUBE</p>
+    <p class="statistics__text"><span class="statistics__numbers">1000 000 000+ </span> ПРОСМОТРОВ НА YOUTUBE</p>
+    <p class="statistics__text"><span class="statistics__numbers">100% </span> ЛОЯЛЬНОЙ АУДИТОРИИ</p>`;
   }
 }
