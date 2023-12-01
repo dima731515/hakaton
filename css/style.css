@@ -139,6 +139,11 @@ body {
 }
 
 @media screen and (max-width: 481px) {
+  html {
+    max-width: 480px;
+    overflow-x: hidden;
+  }
+  
   .button {
     display: flex;
     justify-content: center;
