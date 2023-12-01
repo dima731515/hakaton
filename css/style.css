@@ -1016,7 +1016,7 @@ body {
   .bot {
     padding: 60px 0 30px;
     margin-top: -3px;
-    margin-bottom: 62px;
+    margin-bottom: clamp(50px, 13vw, 62px);
   }
 
   .bot__title {
@@ -1040,7 +1040,7 @@ body {
     max-width: 347px;
     position: relative;
     left: 0px;
-    margin-bottom: 40px;
+    margin-bottom: clamp(25px, 8vw, 40px);
   }
 
   .phone__image {
@@ -1049,7 +1049,7 @@ body {
 
   .bot__description {
     font-size: clamp(14px, 4vw, 16px);
-    max-width: 335px;
+    max-width: clamp(240px, 75vw, 335px);
     line-height: 120%;
     text-align: center;
   }
@@ -1164,14 +1164,13 @@ body {
   .prediction__content {
     display: flex;
     flex-direction: column;
-    justify-content: start;
-    align-items: start;
+    justify-content: center;
+    align-items: center;
     margin-top: 0px;
-    max-width: 335px;
+    max-width: clamp(240px, 75vw, 335px);
   }
 
   .content__description {
-    max-width: 282px;
     margin-right: 0px;
   }
 
@@ -1197,7 +1196,6 @@ body {
   .content__image__container {
     max-width: 205px;
     margin-left: 0px;
-    align-self: center;
     margin-bottom: 33px;
   }
 
@@ -1206,7 +1204,7 @@ body {
   }
 
   .content-description__button {
-    width: clamp(277px, 90vw, 335px);
+    width: 100%;
   }
 }
 
@@ -1260,7 +1258,7 @@ body {
 }
 @media screen and (max-width: 481px) {
   .call-to-action {
-    padding: 76px 0 60px;
+    padding: clamp(60px, 16vw, 76px) 0 60px;
     margin-bottom: 40px;
   }
 
@@ -1273,7 +1271,7 @@ body {
   .call-to-action__text {
     font-size: clamp(14px, 4vw, 16px);
     max-width: 243px;
-    margin-bottom: 34px;
+    margin-bottom: clamp(24px, 10vw, 34px);
     line-height: 130%;
   }
 
@@ -1548,6 +1546,7 @@ body {
     margin-bottom: 61px;
     padding: 0;
     max-width: clamp(320px, 100vw, 480px);
+    align-items: center;
   }
 
   .merch__title {
@@ -1563,10 +1562,16 @@ body {
   }
 
   .cards__container {
-    display: block;
+    display: flex;
     max-width: 100%;
     overflow: hidden;
-    align-self: flex-start;
+    padding-left: clamp(20px, 9vw, 49px);
+  }
+
+  @media screen and (max-width: 406px) {
+    .cards__container {
+      padding-left: clamp(20px, 7vw, 39px);
+    }
   }
 
   .merch__cards {
@@ -1574,8 +1579,7 @@ body {
     gap: 16px;
     margin-bottom: 30px;
     position: relative;
-    left: 40px;
-    align-self: flex-start;
+    left: 0px;
   }
 
   .cards__card {
@@ -1660,7 +1664,7 @@ body {
   }
 
   .merch__button {
-    max-width: clamp(277px, 90vw, 335px);
+    max-width: clamp(277px, 86vw, 335px);
     width: 100%;
     height: 66px;
     white-space: normal;
