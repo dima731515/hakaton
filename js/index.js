@@ -11,6 +11,9 @@ const cardsContainer = document.querySelector(".cards__container");
 const merchCards = document.querySelector(".merch__cards");
 
 buttons.forEach((button, index) => {
+  if (window.outerWidth < 481) {
+    return;
+  }
   button.addEventListener("mouseenter", () => {
     buttonArrow[index].classList.add("invisible");
     buttonArrowYellow[index].classList.remove("invisible");
@@ -25,15 +28,15 @@ buttons.forEach((button) => {
   button.addEventListener("mousedown", () => {
     button.style.scale = "0.99";
   });
-});
-
-buttons.forEach((button) => {
   button.addEventListener("mouseup", () => {
     button.style.scale = "1";
   });
 });
 
 footerLink.forEach((link) => {
+  if (window.outerWidth < 481) {
+    return;
+  }
   link.addEventListener("mouseenter", () => {
     let hover = document.createElement("div");
     hover.classList.add("link__hover");
@@ -46,6 +49,9 @@ footerLink.forEach((link) => {
 
 let scale = null;
 imageContainer.forEach((container) => {
+  if (window.outerWidth < 481) {
+    return;
+  }
   container.addEventListener("mouseenter", () => {
     container.firstChild.nextSibling.style.scale = `${scale}`;
     container.firstChild.nextSibling.style.opacity = "0.75";
@@ -68,6 +74,9 @@ imageContainer.forEach((container) => {
 });
 
 cardLink.forEach((link) => {
+  if (window.outerWidth < 481) {
+    return;
+  }
   link.addEventListener("mouseenter", () => {
     link.firstChild.nextSibling.src = "../images/merch-arrow-square_hover.svg";
   });
@@ -84,6 +93,7 @@ let value = null;
 let x1 = null;
 
 windowSize();
+removeHover();
 
 function windowSize() {
   if (window.outerWidth > 1600) {
@@ -106,6 +116,61 @@ function windowSize() {
     maxLeft = -970;
     maxScale = 1.0419;
     scale = maxScale;
+  }
+}
+
+function removeHover() {
+  if (window.outerWidth < 481) {
+    buttons.forEach((button, index) => {
+      button.removeEventListener("mouseenter", () => {
+        buttonArrow[index].classList.add("invisible");
+        buttonArrowYellow[index].classList.remove("invisible");
+      });
+      button.removeEventListener("mouseleave", () => {
+        buttonArrow[index].classList.remove("invisible");
+        buttonArrowYellow[index].classList.add("invisible");
+      });
+    });
+    footerLink.forEach((link) => {
+      link.removeEventListener("mouseenter", () => {
+        let hover = document.createElement("div");
+        hover.classList.add("link__hover");
+        link.append(hover);
+      });
+      link.removeEventListener("mouseleave", () => {
+        document.querySelector(".link__hover").remove();
+      });
+    });
+    imageContainer.forEach((container) => {
+      container.removeEventListener("mouseenter", () => {
+        container.firstChild.nextSibling.style.scale = `${scale}`;
+        container.firstChild.nextSibling.style.opacity = "0.75";
+
+        let hover = document.createElement("a");
+        hover.classList.add("card__hover");
+        hover.href = "https://www.vk.com/mastrildar";
+        hover.target = "_blank";
+        container.append(hover);
+        hover.innerHTML = `<p class="hover__title">СМОТРЕТЬ</p>
+        <img class="hover-eye" src="../images/eye.svg" alt="" />`;
+      });
+
+      container.removeEventListener("mouseleave", () => {
+        container.firstChild.nextSibling.style.scale = "";
+        container.firstChild.nextSibling.style.opacity = "1";
+
+        document.querySelector(".card__hover").remove();
+      });
+    });
+
+    cardLink.forEach((link) => {
+      link.removeEventListener("mouseenter", () => {
+        link.firstChild.nextSibling.src = "../images/merch-arrow-square_hover.svg";
+      });
+      link.removeEventListener("mouseleave", () => {
+        link.firstChild.nextSibling.src = "../images/merch-arrow-square.svg";
+      });
+    });
   }
 }
 
@@ -237,7 +302,6 @@ function swiperStart(e) {
     let deltaX = (x1 - e.touches[0].clientX) * 2;
     merchCards.style.left = left + -deltaX + "px";
     value = left + -deltaX;
-    console.log(value);
 
     if (value < maxLeft) {
       cardsContainer.removeEventListener("touchmove", swipeMove);
@@ -249,8 +313,5 @@ function swiperStart(e) {
       merchCards.style.left = `${baseLeft}px`;
       value = baseLeft;
     }
-    console.log(value);
   }
 }
-
-
