@@ -726,13 +726,14 @@ body {
     text-align: center;
   }
 
-  .statistics__wrapper {
+.statistics__wrapper {
     flex-direction: column;
     padding: 0;
     position: relative;
     top: 0px;
     opacity: 1;
     animation: slider 7s linear infinite;
+    transform: translateY(0px);
   }
 
   .statistics__unique {
@@ -741,43 +742,43 @@ body {
 
   @keyframes slider {
     0% {
-      top: 0px;
+      transform: translateY(0px);
     }
     12.5% {
-      top: 0px;
+      transform: translateY(0px);
     }
     15% {
-      top: 0px;
+      transform: translateY(0px);
     }
     25% {
-      top: -33px;
+      transform: translateY(-33px);
     }
     37.5% {
-      top: -33px;
+      transform: translateY(-33px);
     }
     40% {
-      top: -33px;
+      transform: translateY(-33px);
     }
     50% {
-      top: -67px;
+      transform: translateY(-67px);
     }
     62.5% {
-      top: -67px;
+      transform: translateY(-67px);
     }
     65% {
-      top: -67px;
+      transform: translateY(-67px);
     }
     75% {
-      top: -101px;
+      transform: translateY(-101px);
     }
     87.5% {
-      top: -101px;
+      transform: translateY(-101px);
     }
     90% {
-      top: -101px;
+      transform: translateY(-101px);
     }
     100% {
-      top: -136px;
+      transform: translateY(-136px);
     }
   }
 
