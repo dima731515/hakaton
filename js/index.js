@@ -59,7 +59,7 @@ imageContainer.forEach((container) => {
 
     let hover = document.createElement("a");
     hover.classList.add("card__hover");
-    hover.href = "https://www.vk.com/mastrildar";
+    hover.href = "#";
     hover.target = "_blank";
     container.append(hover);
     hover.innerHTML = `<p class="hover__title">СМОТРЕТЬ</p>
