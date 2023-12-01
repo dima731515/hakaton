@@ -1,11 +1,11 @@
 @font-face {
   font-family: "counter-strike";
-  src: local(cs_regular), url(/hakaton/fonts/cs_regular.woff);
+  src: local(cs_regular), url(../fonts/cs_regular.woff);
 }
 
 @font-face {
   font-family: "counter-strike_bold";
-  src: local(cs_bold), url(/hakaton/fonts/cs_bold.woff);
+  src: local(cs_bold), url(../fonts/cs_bold.woff);
 }
 
 html {
@@ -143,7 +143,7 @@ body {
     max-width: 480px;
     overflow-x: hidden;
   }
-  
+
   .button {
     display: flex;
     justify-content: center;
@@ -167,9 +167,9 @@ body {
 
   .button:hover {
     padding: 13px 0px 12px;
-    color: var(--yellow);
-    background-color: var(--black);
-    border: 1px solid var(--yellow);
+    color: var(--black);
+    background-color: var(--yellow);
+    border: 1px solid transparent;
   }
 
   .button__content {
@@ -1592,7 +1592,7 @@ body {
   }
 
   .card__image__container:hover {
-    border: 5px solid var(--yellow);
+    border: none;
   }
 
   .card__image {
@@ -1764,7 +1764,7 @@ body {
   width: 83px;
   height: 83px;
   left: -17px;
-  background-image: url(/hakaton/images/icons-footer/icon-hover.svg);
+  background-image: url(../images/icons-footer/icon-hover.svg);
   background-repeat: no-repeat;
   transform: rotate(0deg);
   animation: circle 15s linear infinite;
@@ -1871,7 +1871,7 @@ body {
     width: 65px;
     height: 65px;
     left: -14.5px;
-    background-image: url(/hakaton/images/icons-footer/icon-hover.svg);
+    background-image: url(../images/icons-footer/icon-hover.svg);
     background-repeat: no-repeat;
     background-size: 100%;
     transform: rotate(0deg);
@@ -1977,7 +1977,7 @@ body {
     width: 65px;
     height: 65px;
     left: -14.5px;
-    background-image: url(/hakaton/images/icons-footer/icon-hover.svg);
+    background-image: url(../images/icons-footer/icon-hover.svg);
     background-repeat: no-repeat;
     background-size: 100%;
     transform: rotate(0deg);
