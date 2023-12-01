@@ -229,7 +229,7 @@ function swiperStart(e) {
   x1 = e.touches[0].clientX;
 
   cardsContainer.addEventListener("touchmove", swipeMove);
-  document.addEventListener("touchрутв", () => {
+  document.addEventListener("touchend", () => {
     cardsContainer.removeEventListener("touchmove", swipeMove);
   });
 
@@ -253,6 +253,4 @@ function swiperStart(e) {
   }
 }
 
-/*document.addEventListener("click", () => {
-  console.log(window.outerWidth);
-});*/
+
