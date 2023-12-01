@@ -77,6 +77,7 @@ cardLink.forEach((link) => {
 });
 
 cardsContainer.addEventListener("mousedown", sliderStart);
+cardsContainer.addEventListener("touchstart", swiperStart);
 
 let baseLeft;
 let value = null;
@@ -99,7 +100,7 @@ function windowSize() {
     maxLeft = -560;
     maxScale = 1.0419;
     scale = maxScale;
-  } else if (window.outerWidth < 600) {
+  } else if (window.outerWidth < 481) {
     baseLeft = 40;
     value = baseLeft;
     maxLeft = -970;
@@ -220,6 +221,38 @@ function sliderStart(e) {
   }
 }
 
-document.addEventListener("click", () => {
+function swiperStart(e) {
+  merchCards.style.left = value + "px";
+  let left = merchCards.style.left;
+  left = +left.split("px")[0];
+
+  x1 = e.touches[0].clientX;
+
+  cardsContainer.addEventListener("touchmove", swipeMove);
+  document.addEventListener("touchрутв", () => {
+    cardsContainer.removeEventListener("touchmove", swipeMove);
+  });
+
+  function swipeMove(e) {
+    let deltaX = x1 - e.touches[0].clientX;
+    merchCards.style.left = left + -deltaX + "px";
+    value = left + -deltaX;
+    console.log(value);
+
+    if (value < maxLeft) {
+      cardsContainer.removeEventListener("touchmove", swipeMove);
+      merchCards.style.left = `${maxLeft}px`;
+      value = maxLeft;
+    }
+
+    if (value > baseLeft) {
+      merchCards.style.left = `${baseLeft}px`;
+      value = baseLeft;
+    }
+    console.log(value);
+  }
+}
+
+/*document.addEventListener("click", () => {
   console.log(window.outerWidth);
-});
+});*/
