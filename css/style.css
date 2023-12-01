@@ -1775,7 +1775,7 @@ body {
   border-radius: 50%;
   background-color: var(--yellow);
   top: calc(50% - 50px);
-  left: calc(50% - 50px);
+  left: calc(50% - 60px);
   padding-top: 8px;
 }
 
