@@ -194,7 +194,7 @@ body {
   }
 
   .container {
-    max-width: 335px;
+    max-width: clamp(241px, 76vw, 335px);
   }
 }
 
@@ -266,6 +266,7 @@ body {
 }
 
 .statistics {
+  max-width: clamp(1345px, 97vw, 1815px);
   width: 100%;
 }
 
@@ -452,7 +453,7 @@ body {
   }
 
   .hero {
-    margin-top: 62px;
+    margin-top: clamp(53px, 3vw, 62px);
     height: 100%;
     max-height: 100%;
     position: relative;
@@ -468,8 +469,8 @@ body {
 
   .hero__title {
     font-family: "counter-strike_bold";
-    font-size: 55.5px;
-    line-height: 37px;
+    font-size: clamp(44px, 15vw, 55.5px);
+    line-height: clamp(30px, 9vw, 37px);
     letter-spacing: -2px;
     position: relative;
 
@@ -485,7 +486,7 @@ body {
     right: 0px;
     margin-top: 0px;
     align-self: flex-end;
-    margin-bottom: 60px;
+    margin-bottom: clamp(40px, 6vw, 60px);
   }
 
   .hero__description {
@@ -498,7 +499,7 @@ body {
 
   .description__image {
     max-width: 214px;
-    margin-bottom: 28px;
+    margin-bottom: clamp(24px, 4vw, 28px);
   }
 
   .hero-description__image {
@@ -507,7 +508,7 @@ body {
 
   .description__text {
     max-width: 686px;
-    font-size: 16px;
+    font-size: clamp(14px, 4vw, 16px);
     line-height: 19px;
     margin-bottom: 39px;
   }
@@ -602,7 +603,7 @@ body {
     align-items: center;
     flex-wrap: nowrap;
     background-color: var(--yellow);
-    margin-bottom: 70px;
+    margin-bottom: clamp(60px, 7vw, 70px);
     padding-top: 1px;
   }
 
@@ -751,14 +752,14 @@ body {
   .about__title {
     margin-bottom: 20px;
     font-family: "counter-strike";
-    font-size: 55.5px;
+    font-size: clamp(36px, 7vw, 55.5px);
     line-height: 37px;
     letter-spacing: 0px;
   }
 
   .about__text_first {
-    font-size: 16px;
-    line-height: 20px;
+    font-size: clamp(14px, 4vw, 16px);
+    line-height: 120%;
   }
 
   .about__text_second {
@@ -774,12 +775,19 @@ body {
     margin: 30px 0 10px;
   }
 
+  @media screen and (max-width: 321px) {
+    .about__text_second,
+    .about-text__separator {
+      display: none;
+    }
+  }
+
   .about__photo {
-    max-width: 251px;
+    max-width: clamp(161px, 20vw, 251px);
     overflow: hidden;
     position: relative;
     left: 0px;
-    z-index: -1;
+    z-index: 0;
   }
 
   .photo__image {
@@ -1013,7 +1021,7 @@ body {
 
   .bot__title {
     position: relative;
-    font-size: 55px;
+    font-size: clamp(36px, 7vw, 55.5px);
     width: 100%;
     white-space: nowrap;
     margin-bottom: 0px;
@@ -1040,7 +1048,7 @@ body {
   }
 
   .bot__description {
-    font-size: 16px;
+    font-size: clamp(14px, 4vw, 16px);
     max-width: 335px;
     line-height: 120%;
     text-align: center;
@@ -1172,7 +1180,7 @@ body {
   }
 
   .content-description__title {
-    font-size: 28px;
+    font-size: clamp(25px, 7vw, 28px);
     font-weight: 600;
     margin: 8px 0 16px;
     line-height: 110%;
@@ -1181,9 +1189,9 @@ body {
   }
 
   .content-description__text {
-    font-size: 16px;
+    font-size: clamp(14px, 4vw, 16px);
     line-height: 120%;
-    margin-bottom: 24px;
+    margin-bottom: clamp(25px, 7vw, 28px);
   }
 
   .content__image__container {
@@ -1198,7 +1206,7 @@ body {
   }
 
   .content-description__button {
-    width: 335px;
+    width: clamp(277px, 90vw, 335px);
   }
 }
 
@@ -1257,13 +1265,13 @@ body {
   }
 
   .call-to-action__title {
-    font-size: 40px;
+    font-size: clamp(30px, 9.5vw, 40px);
     letter-spacing: 3px;
     margin-bottom: 34px;
   }
 
   .call-to-action__text {
-    font-size: 16px;
+    font-size: clamp(14px, 4vw, 16px);
     max-width: 243px;
     margin-bottom: 34px;
     line-height: 130%;
@@ -1539,12 +1547,12 @@ body {
   .merch {
     margin-bottom: 61px;
     padding: 0;
-    max-width: 480px;
+    max-width: clamp(320px, 100vw, 480px);
   }
 
   .merch__title {
     font-family: "counter-strike";
-    font-size: 45px;
+    font-size: clamp(35px, 10vw, 45px);
     letter-spacing: 2px;
     margin-bottom: 11px;
   }
@@ -1652,7 +1660,7 @@ body {
   }
 
   .merch__button {
-    max-width: 335px;
+    max-width: clamp(277px, 90vw, 335px);
     width: 100%;
     height: 66px;
     white-space: normal;
@@ -1885,7 +1893,7 @@ body {
     align-items: center;
     width: 100vw;
     height: 100%;
-    max-height: 1090px;
+    max-height: 480px;
     background-color: var(--black);
   }
 
@@ -1957,6 +1965,13 @@ body {
     position: relative;
 
     max-width: 35px;
+  }
+
+  @media screen and (max-width: 336px) {
+    .footer-link:nth-child(2),
+    .footer-link:nth-child(5) {
+      display: none;
+    }
   }
 
   .footer-link__icon {
