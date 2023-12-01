@@ -234,7 +234,7 @@ function swiperStart(e) {
   });
 
   function swipeMove(e) {
-    let deltaX = x1 - e.touches[0].clientX;
+    let deltaX = (x1 - e.touches[0].clientX) * 2;
     merchCards.style.left = left + -deltaX + "px";
     value = left + -deltaX;
     console.log(value);
