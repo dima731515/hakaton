@@ -1690,6 +1690,7 @@ body {
 
   .call-to-action__button {
     max-width: 240px;
+    height: 60px;
   }
 }
 /* ================ MERCH ===================== */
