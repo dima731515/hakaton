@@ -110,12 +110,26 @@ function windowSize() {
     maxLeft = -560;
     maxScale = 1.0419;
     scale = maxScale;
-  } else if (window.outerWidth < 481) {
+  } else if ((window.outerWidth < 481) & (window.outerWidth >= 443)) {
     baseLeft = 40;
     value = baseLeft;
-    maxLeft = -970;
-    maxScale = 1.0419;
-    scale = maxScale;
+    maxLeft = -980;
+  } else if ((window.outerWidth <= 443) & (window.outerWidth >= 420)) {
+    baseLeft = window.outerWidth / 11;
+    value = baseLeft;
+    maxLeft = -1000;
+  } else if ((window.outerWidth <= 420) & (window.outerWidth >= 405)) {
+    baseLeft = window.outerWidth / 11;
+    value = baseLeft;
+    maxLeft = -1020;
+  } else if ((window.outerWidth <= 405) & (window.outerWidth >= 350)) {
+    baseLeft = window.outerWidth / 16.5;
+    value = baseLeft;
+    maxLeft = -1080;
+  } else if ((window.outerWidth <= 350) & (window.outerWidth >= 320)) {
+    baseLeft = window.outerWidth / 16.5;
+    value = baseLeft;
+    maxLeft = -1110;
   }
 }
 
