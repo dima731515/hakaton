@@ -1,4 +1,4 @@
-window.location.reload(true);
+
 const buttons = Array.from(document.querySelectorAll(".button"));
 const buttonArrow = Array.from(document.querySelectorAll(".button__arrow"));
 const buttonArrowYellow = Array.from(document.querySelectorAll(".button__arrow_y"));
