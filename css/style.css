@@ -264,8 +264,6 @@ body {
   }
 }
 
-/* =================== HERO ================= */
-
 .header {
   width: 100%;
   display: flex;
@@ -734,7 +732,7 @@ body {
     justify-content: center;
     padding-top: 1px;
     width: 100%;
-    max-height: 34px;
+    height: 34px;
     overflow-y: hidden;
     position: relative;
     text-align: center;
@@ -754,7 +752,7 @@ body {
     display: block;
   }
 
-  @keyframes slider {
+ @keyframes slider {
     0% {
       transform: translateY(0px);
     }
@@ -1016,7 +1014,7 @@ body {
   .about__title {
     margin-bottom: 20px;
     font-family: "counter-strike";
-    font-size: clamp(36px, 11.5vw, 55.5px);
+    font-size: clamp(36px, 7vw, 55.5px);
     line-height: 37px;
     letter-spacing: 0px;
   }
@@ -1483,6 +1481,7 @@ body {
     text-align: center;
   }
 }
+
 
 /* ================ PREDITCTION ===================== */
 
