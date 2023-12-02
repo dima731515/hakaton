@@ -2,30 +2,6 @@ window.addEventListener("resize", changePositionElements);
 
 function changePositionElements() {
   if (window.outerWidth < 481) {
-    document.querySelector(".hero").innerHTML = `
-  <div class="hero__title__container">
-    <h1 class="hero__title">ПРИЯТНЫЙ ИЛЬДАР</h1>
-  </div>
-  <div class="description__image">
-    <img class="hero-description__image" src="../images/Badge.png" alt="" />
-  </div>
-  <div class="hero__description">
-    <p class="description__text">
-      Меня зовут Ильдар, и по слухам я приятный молодой человек. Снимаю разноформатные ролики, начиная от скетчей, заканчивая рассуждениями на
-      какую-либо тему.
-    </p>
-  </div>
-  <a href="https://www.youtube.com/@pleasantildar" target="_blank" class="hero__button button">
-    <div class="button__content">
-      <div class="button-content__arrow__container">
-        <img class="button__arrow" src="../images/button-arrow.svg" alt="" />
-        <img class="button__arrow_y invisible" src="../images/button-arrow_y.svg" alt="" />
-      </div>
-      <p class="content__text">СМОТРЕТЬ<br />НА YOUTUBE</p>
-    </div>
-  </a>`;
-
-    document.querySelectorAll(".promo__message").forEach((item) => (item.style.display = "none"));
     document.querySelector(".prediction__content").innerHTML = `
     <div class="content__description">
     <img class="content-description__image" src="../images/chat-bubble.svg" alt="" />
@@ -70,7 +46,7 @@ function changePositionElements() {
     <a href="https://www.vk.com/mastrildar" target="_blank" class="footer-link">
     <img class="footer-link__icon"src="../images/icons-header/v.2/VK.svg" alt="VK" />
   </a></div>`;
-    document.querySelector(".phone__image").src = "../images/phone-mobile.png";
+
     document.querySelector(".statistics__wrapper").innerHTML = `
     <p class="statistics__text"><span class="statistics__numbers">100% </span> ЛОЯЛЬНОЙ АУДИТОРИИ</p>
     <p class="statistics__text"><span class="statistics__numbers">238 000 </span> ПОДПИСЧИКОВ В TELEGRAM</p>
