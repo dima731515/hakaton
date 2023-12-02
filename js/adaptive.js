@@ -2,6 +2,7 @@ window.addEventListener("resize", changePositionElements);
 
 function changePositionElements() {
   if (window.outerWidth < 481) {
+        
     document.querySelector(".prediction__content").innerHTML = `
     <div class="content__description">
     <img class="content-description__image" src="../images/chat-bubble.svg" alt="" />
@@ -11,7 +12,7 @@ function changePositionElements() {
     <div class="content__image__container">
       <img class="content-image-container__image" src="../images/prediction-image.png" alt="" />
     </div>
-    <a href="" class="content-description__button button">
+    <a href="https://t.me/PriyatniyIldar_bot" target="_blank" class="content-description__button button">
       <div class="button__content">
         <div class="button-content__arrow__container">
           <img class="button__arrow" src="../images/button-arrow.svg" alt="" />
@@ -43,10 +44,15 @@ function changePositionElements() {
     ><img class="footer-link__icon"src="../images/icons-header/v.2/Twitter.svg" alt="Twitter"
   /></a></div>
     <div class="footer-link">
-    <a href="https://www.vk.com/mastrildar" target="_blank" class="footer-link">
+    <a href="https://vk.com/pleasentildar" target="_blank" class="footer-link">
     <img class="footer-link__icon"src="../images/icons-header/v.2/VK.svg" alt="VK" />
   </a></div>`;
-
     
+    document.querySelector(".statistics__wrapper").innerHTML = `
+    <p class="statistics__text"><span class="statistics__numbers">100% </span> ЛОЯЛЬНОЙ АУДИТОРИИ</p>
+    <p class="statistics__text"><span class="statistics__numbers">238 000 </span> ПОДПИСЧИКОВ В TELEGRAM</p>
+    <p class="statistics__text"><span class="statistics__numbers">3 900 000 </span> ПОДПИСЧИКОВ НА YOUTUBE</p>
+    <p class="statistics__text"><span class="statistics__numbers">1000 000 000+ </span> ПРОСМОТРОВ НА YOUTUBE</p>
+    <p class="statistics__text"><span class="statistics__numbers">100% </span> ЛОЯЛЬНОЙ АУДИТОРИИ</p>`;
   }
 }
