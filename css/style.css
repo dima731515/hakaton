@@ -264,6 +264,8 @@ body {
   }
 }
 
+/* =================== HERO ================= */
+
 .header {
   width: 100%;
   display: flex;
@@ -285,6 +287,10 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
+}
+
+.hero_mobile {
+  display: none;
 }
 
 .hero__title__container {
@@ -658,6 +664,14 @@ body {
     align-items: center;
   }
 
+  .hero_desctop {
+    display: none;
+  }
+
+  .hero_mobile {
+    display: flex;
+  }
+
   .hero__title__container {
     position: relative;
     margin-bottom: 38px;
@@ -720,13 +734,13 @@ body {
     justify-content: center;
     padding-top: 1px;
     width: 100%;
-    height: 34px;
+    max-height: 34px;
     overflow-y: hidden;
     position: relative;
     text-align: center;
   }
 
-.statistics__wrapper {
+  .statistics__wrapper {
     flex-direction: column;
     padding: 0;
     position: relative;
@@ -1002,7 +1016,7 @@ body {
   .about__title {
     margin-bottom: 20px;
     font-family: "counter-strike";
-    font-size: clamp(36px, 7vw, 55.5px);
+    font-size: clamp(36px, 11.5vw, 55.5px);
     line-height: 37px;
     letter-spacing: 0px;
   }
@@ -1372,7 +1386,7 @@ body {
 
   .bot__title {
     position: relative;
-    font-size: clamp(36px, 7vw, 55.5px);
+    font-size: clamp(36px, 11.5vw, 55.5px);
     width: 100%;
     white-space: nowrap;
     margin-bottom: 0px;
@@ -1388,7 +1402,7 @@ body {
   }
 
   .phone__image-container {
-    max-width: 347px;
+    max-width: 197px;
     position: relative;
     left: 0px;
     margin-bottom: clamp(25px, 8vw, 40px);
@@ -1396,6 +1410,70 @@ body {
 
   .phone__image {
     width: 100%;
+  }
+
+  .promo__message {
+    position: absolute;
+    background-color: var(--white);
+    border: 2.4px solid var(--yellow);
+    border-top-right-radius: 7px;
+    border-bottom-left-radius: 7px;
+    font-size: 8px;
+    font-weight: 500;
+    line-height: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-box-shadow: 1px 1px 0px 0px rgba(51, 51, 51, 1);
+    -moz-box-shadow: 1px 1px 0px 0px rgba(51, 51, 51, 1);
+    box-shadow: 1px 1px 0px 0px rgba(51, 51, 51, 1);
+    border: 1px solid var(--black);
+  }
+
+  .message_1 {
+    top: 54px;
+    left: -46px;
+    transform: rotate(-17.19deg);
+    width: 88px;
+    height: 41px;
+    padding: 0px 0px;
+  }
+  .message_2 {
+    top: 42px;
+    left: 156px;
+    transform: rotate(12.68deg);
+    width: 89px;
+    height: 19px;
+  }
+  .message_3 {
+    top: 255px;
+    left: -50px;
+    transform: rotate(-16.46deg);
+    width: 119px;
+    height: 19px;
+  }
+  .message_4 {
+    top: 185px;
+    left: 130px;
+    transform: rotate(42deg);
+    width: 121px;
+    height: 19px;
+  }
+  .message_5 {
+    top: 339px;
+    left: -36px;
+    transform: rotate(6.26deg);
+    width: 122px;
+    height: 19px;
+  }
+  .message_6 {
+    top: 291px;
+    left: 139px;
+    transform: rotate(-15deg);
+    width: 92px;
+    height: 41px;
+    padding: 0 10px;
   }
 
   .bot__description {
