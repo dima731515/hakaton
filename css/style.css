@@ -696,7 +696,7 @@ body {
     right: 0px;
     margin-top: 0px;
     align-self: flex-end;
-    margin-bottom: auto;
+    margin-bottom: clamp(40px, 6vw, 60px);
   }
 
   .hero__description {
