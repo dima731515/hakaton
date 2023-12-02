@@ -10,10 +10,8 @@ const cardLink = Array.from(document.querySelectorAll(".card__link"));
 const cardsContainer = document.querySelector(".cards__container");
 const merchCards = document.querySelector(".merch__cards");
 
-const width = window.screen.width;
-
 buttons.forEach((button, index) => {
-  if (width < 481) {
+  if (window.outerWidth < 481) {
     return;
   }
   button.addEventListener("mouseenter", () => {
@@ -36,7 +34,7 @@ buttons.forEach((button) => {
 });
 
 footerLink.forEach((link) => {
-  if (width < 481) {
+  if (window.outerWidth < 481) {
     return;
   }
   link.addEventListener("mouseenter", () => {
@@ -51,7 +49,7 @@ footerLink.forEach((link) => {
 
 let scale = null;
 imageContainer.forEach((container) => {
-  if (width < 481) {
+  if (window.outerWidth < 481) {
     return;
   }
   container.addEventListener("mouseenter", () => {
@@ -76,7 +74,7 @@ imageContainer.forEach((container) => {
 });
 
 cardLink.forEach((link) => {
-  if (width < 481) {
+  if (window.outerWidth < 481) {
     return;
   }
   link.addEventListener("mouseenter", () => {
@@ -98,51 +96,51 @@ windowSize();
 removeHover();
 
 function windowSize() {
-  if (width > 1600) {
+  if (window.outerWidth > 1600) {
     baseLeft = 48;
     maxLeft = -830;
     maxScale = 1.0519;
     scale = maxScale;
     value = baseLeft;
     console.log(1);
-  } else if ((width < 1601) & (width > 1200)) {
+  } else if ((window.outerWidth < 1601) & (window.outerWidth > 1200)) {
     baseLeft = 85;
     maxLeft = -555;
     maxScale = 1.0519;
     scale = maxScale;
     value = baseLeft;
     console.log(2);
-  } else if ((width < 1201) & (width > 1100)) {
+  } else if ((window.outerWidth < 1201) & (window.outerWidth > 1100)) {
     baseLeft = 48;
     maxLeft = -855;
     maxScale = 1.0519;
     scale = maxScale;
     value = baseLeft;
     console.log(3);
-  } else if ((width > 800) & (width < 1100)) {
+  } else if ((window.outerWidth > 800) & (window.outerWidth < 1100)) {
     baseLeft = 85;
     maxLeft = -560;
     maxScale = 1.0419;
     scale = maxScale;
     value = baseLeft;
     console.log(4);
-  } else if ((width < 481) & (width >= 434)) {
+  } else if ((window.outerWidth < 481) & (window.outerWidth >= 434)) {
     baseLeft = 0;
     maxLeft = -1025;
     console.log(5);
-  } else if ((width < 434) & (width >= 484)) {
+  } else if ((window.outerWidth < 434) & (window.outerWidth >= 484)) {
     baseLeft = 0;
     maxLeft = -1064;
     console.log(6);
-  } else if ((width < 484) & (width >= 349)) {
+  } else if ((window.outerWidth < 484) & (window.outerWidth >= 349)) {
     baseLeft = 0;
     maxLeft = -1093;
     console.log(7);
-  } else if ((width < 349) & (width >= 327)) {
+  } else if ((window.outerWidth < 349) & (window.outerWidth >= 327)) {
     baseLeft = 0;
     maxLeft = -1117;
     console.log(8);
-  } else if (width < 327) {
+  } else if (window.outerWidth < 327) {
     baseLeft = 0;
     maxLeft = -1140;
     console.log(9);
@@ -150,7 +148,7 @@ function windowSize() {
 }
 
 function removeHover() {
-  if (width < 481) {
+  if (window.outerWidth < 481) {
     buttons.forEach((button, index) => {
       button.removeEventListener("mouseenter", () => {
         buttonArrow[index].classList.add("invisible");
@@ -178,7 +176,7 @@ function removeHover() {
 
         let hover = document.createElement("a");
         hover.classList.add("card__hover");
-        hover.href = "https://www.vk.com/mastrildar";
+        hover.href = "#";
         hover.target = "_blank";
         container.append(hover);
         hover.innerHTML = `<p class="hover__title">СМОТРЕТЬ</p>
